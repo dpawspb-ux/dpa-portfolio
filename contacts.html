@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты архитектурной мастерской DPA">
+  <title>Контакты — DPA</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      height: 76px;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -1.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 38px;
+    }
+
+    nav a {
+      font-size: 11px;
+    }
+
+    nav a:hover { color: #a42b25; }
+
+    main {
+      width: 80%;
+      max-width: 1000px;
+      min-height: 60vh;
+      margin: 8vw auto 12vw;
+    }
+
+    h1 {
+      margin: 0 0 9vw;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 300;
+      letter-spacing: -.055em;
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8vw;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+    .contacts a {
+      font-size: clamp(16px, 2vw, 22px);
+      transition: color .2s;
+    }
+
+    .contacts a:hover {
+      color: #a42b25;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 5% 30px;
+      color: #777;
+      font-size: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header { height: 66px; }
+      nav { gap: 14px; }
+      nav a { font-size: 10px; }
+
+      main {
+        width: 90%;
+        margin-top: 12vw;
+      }
+
+      h1 { margin-bottom: 15vw; }
+
+      .contacts {
+        grid-template-columns: 1fr;
+        gap: 12vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="index.html">DPA</a>
+
+  <nav>
+    <a href="index.html#projects">Проекты</a>
+    <a href="about.html">О бюро</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Контакты</h1>
+
+  <section class="contacts">
+    <div>
+      <h2>ЭЛЕКТРОННАЯ ПОЧТА</h2>
+      <a href="mailto:arx812@gmail.com">
+        arx812@gmail.com
+      </a>
+    </div>
+
+    <div>
+      <h2>ТЕЛЕФОН</h2>
+      <a href="tel:+79216425135">
+        +7 (921) 642 51 35
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>DPA — Dmitrii Potaralov Architects</span>
+  <span>© 2026</span>
+</footer>
+
+</body>
+</html>
