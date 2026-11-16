@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DPA — архитектурная мастерская Дмитрия Потаралова">
+  <title>DPA — Dmitrii Potaralov Architects</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      height: 76px;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -1.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 38px;
+    }
+
+    nav a {
+      font-size: 11px;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: #a42b25;
+    }
+
+    .projects {
+      width: 80%;
+      margin: 5.5vw auto 8vw;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4.6vw;
+    }
+
+    .project {
+      min-width: 0;
+    }
+
+    .project img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #f0f0ee;
+      transition: opacity .25s;
+    }
+
+    .project:hover img {
+      opacity: .85;
+    }
+
+    .project span {
+      display: block;
+      margin-top: 10px;
+      font-size: 9px;
+      font-weight: 300;
+      letter-spacing: .045em;
+      opacity: .72;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 5% 30px;
+      color: #777;
+      font-size: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .projects {
+        width: 85%;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        height: 66px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 10px;
+      }
+
+      .projects {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5vw;
+      }
+
+      .project span {
+        font-size: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="index.html">DPA</a>
+
+    <nav>
+      <a href="#projects">Проекты</a>
+      <a href="about.html">О бюро</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects" id="projects">
+
+      <a class="project" href="#">
+        <img src="images/project-01.jpg" alt="Жилой комплекс">
+        <span>ЖИЛОЙ КОМПЛЕКС</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-02.jpg" alt="Частный дом">
+        <span>ЧАСТНЫЙ ДОМ</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-03.jpg" alt="Экокурорт Кисловодск">
+        <span>ЭКОКУРОРТ КИСЛОВОДСК</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-04.jpg" alt="Гребной клуб с отелем">
+        <span>ГРЕБНОЙ КЛУБ С ОТЕЛЕМ</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-05.jpg" alt="Небо">
+        <span>НЕБО</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-06.jpg" alt="Рыбная деревня 2">
+        <span>РЫБНАЯ ДЕРЕВНЯ 2</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-07.jpg" alt="9 Ключей">
+        <span>9 КЛЮЧЕЙ</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-08.jpg" alt="Посёлок Yohta">
+        <span>ПОСЁЛОК YOHTA</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-09.jpg" alt="ФОК">
+        <span>ФОК</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-10.jpg" alt="Апарт Синопская">
+        <span>АПАРТ СИНОПСКАЯ</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-11.jpg" alt="Общественное здание">
+        <span>ОБЩЕСТВЕННОЕ ЗДАНИЕ</span>
+      </a>
+
+      <a class="project" href="#">
+        <img src="images/project-12.jpg" alt="Загородный дом">
+        <span>ЗАГОРОДНЫЙ ДОМ</span>
+      </a>
+
+    </section>
+  </main>
+
+  <footer>
+    <span>DPA — Dmitrii Potaralov Architects</span>
+    <span>© <span id="year"></span></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
