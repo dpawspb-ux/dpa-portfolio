@@ -6,10 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="DPA — архитектурная мастерская Дмитрия Потаралова">
 <title>DPA — Dmitrii Potaralov Architects</title>
-<style>
-* { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -24,31 +29,49 @@ a {
   text-decoration: none;
 }
 
+/* HEADER */
+
 header {
-  height: 76px;
-  padding: 0 5%;
+  width: 80%;
+  height: 112px;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -1.5px;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  flex: 0 0 auto;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 nav {
   display: flex;
-  gap: 38px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 42px;
 }
 
 nav a {
-  font-size: 11px;
+  font-size: 15px;
+  font-weight: 400;
   transition: color .2s;
 }
 
-nav a:hover { color: #a42b25; }
+nav a:hover {
+  color: #a42b25;
+}
+
+/* PROJECT GRID */
 
 .projects {
   width: 80%;
@@ -72,7 +95,9 @@ nav a:hover { color: #a42b25; }
   transition: opacity .25s;
 }
 
-.project:hover img { opacity: .88; }
+.project:hover img {
+  opacity: .88;
+}
 
 .project span {
   display: block;
@@ -83,6 +108,8 @@ nav a:hover { color: #a42b25; }
   opacity: .72;
 }
 
+/* FOOTER */
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -91,17 +118,46 @@ footer {
   font-size: 10px;
 }
 
+/* TABLET */
+
 @media (max-width: 900px) {
+  header {
+    width: 85%;
+  }
+
   .projects {
     width: 85%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .logo {
+    width: 165px;
+  }
+
+  nav {
+    gap: 28px;
+  }
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
-  header { height: 66px; }
-  nav { gap: 14px; }
-  nav a { font-size: 10px; }
+  header {
+    width: 90%;
+    height: 82px;
+  }
+
+  .logo {
+    width: 112px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
 
   .projects {
     width: 90%;
@@ -109,7 +165,15 @@ footer {
     gap: 5vw;
   }
 
-  .project span { font-size: 8px; }
+  .project span {
+    font-size: 8px;
+  }
+
+  footer {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 9px;
+  }
 }
 </style>
 </head>
@@ -117,7 +181,10 @@ footer {
 <body>
 
 <header>
-  <a class="logo" href="index.html">DPA</a>
+  <a class="logo" href="index.html" aria-label="DPA — Dmitrii Potaralov Architects">
+    <img src="logo.svg" alt="DPA — Dmitrii Potaralov Architects">
+  </a>
+
   <nav>
     <a href="#projects">Проекты</a>
     <a href="about.html">О бюро</a>
@@ -128,47 +195,47 @@ footer {
 <main>
 <section class="projects" id="projects">
 
-<a class="project" href="#">
-<img src="project-01.jpg" alt="Жилой комплекс">
-<span>ЖИЛОЙ КОМПЛЕКС</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-01.jpg" alt="Жилой комплекс">
+    <span>ЖИЛОЙ КОМПЛЕКС</span>
+  </a>
 
-<a class="project" href="#">
-<img src="project-02.jpg" alt="Дом среди сосен">
-<span>ДОМ СРЕДИ СОСЕН</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-02.jpg" alt="Дом среди сосен">
+    <span>ДОМ СРЕДИ СОСЕН</span>
+  </a>
 
-<a class="project" href="#">
-<img src="project-03.jpg" alt="Экокурорт">
-<span>ЭКОКУРОРТ</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-03.jpg" alt="Экокурорт">
+    <span>ЭКОКУРОРТ</span>
+  </a>
 
-<a class="project" href="#">
-<img src="project-04.jpg" alt="Отель — гребной клуб">
-<span>ОТЕЛЬ — ГРЕБНОЙ КЛУБ</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-04.jpg" alt="Отель — гребной клуб">
+    <span>ОТЕЛЬ — ГРЕБНОЙ КЛУБ</span>
+  </a>
 
-<a class="project" href="#">
-<img src="project-05.jpg" alt="Дом Sky">
-<span>ДОМ SKY</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-05.jpg" alt="Дом Sky">
+    <span>ДОМ SKY</span>
+  </a>
 
-<a class="project" href="#">
-<img src="project-06.jpg" alt="ЖК 9 Ключей">
-<span>ЖК 9 КЛЮЧЕЙ</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-06.jpg" alt="ЖК 9 Ключей">
+    <span>ЖК 9 КЛЮЧЕЙ</span>
+  </a>
 
-<a class="project" href="#">
-<img src="project-07.jpg" alt="ТЦ Smart, Ириновский">
-<span>ТЦ SMART, ИРИНОВСКИЙ</span>
-</a>
+  <a class="project" href="#">
+    <img src="project-07.jpg" alt="ТЦ Smart, Ириновский">
+    <span>ТЦ SMART, ИРИНОВСКИЙ</span>
+  </a>
 
 </section>
 </main>
 
 <footer>
-<span>DPA — Dmitrii Potaralov Architects</span>
-<span>© 2026</span>
+  <span>DPA — Dmitrii Potaralov Architects</span>
+  <span>© 2026</span>
 </footer>
 
 </body>
