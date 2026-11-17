@@ -6,8 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="О бюро DPA — архитектурной мастерской Дмитрия Потаралова">
 <title>О бюро — DPA</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -60,7 +63,9 @@ nav a {
   transition: color .2s;
 }
 
-nav a:hover { color: #a42b25; }
+nav a:hover {
+  color: #a42b25;
+}
 
 main {
   width: 80%;
@@ -86,7 +91,7 @@ h1 {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   filter: grayscale(100%);
   opacity: .82;
 }
@@ -126,10 +131,21 @@ footer {
 }
 
 @media (max-width: 900px) {
-  header { width: 85%; }
-  .logo { width: 91px; }
-  nav { gap: 28px; }
-  nav a { font-size: 14px; }
+  header {
+    width: 85%;
+  }
+
+  .logo {
+    width: 91px;
+  }
+
+  nav {
+    gap: 28px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -138,8 +154,13 @@ footer {
     height: 82px;
   }
 
-  .logo { width: 62px; }
-  nav { gap: 12px; }
+  .logo {
+    width: 62px;
+  }
+
+  nav {
+    gap: 12px;
+  }
 
   nav a {
     font-size: 9px;
@@ -151,9 +172,12 @@ footer {
     margin-top: 12vw;
   }
 
-  h1 { margin-bottom: 10vw; }
+  h1 {
+    margin-bottom: 10vw;
+  }
 
-  .intro, .columns {
+  .intro,
+  .columns {
     grid-template-columns: 1fr;
     gap: 8vw;
   }
@@ -186,7 +210,7 @@ footer {
   <section class="intro">
     <img
       class="portrait"
-      src="https://s3.amazonaws.com/webflow-prod-assets/6afb16191a68f56bbb85ab36/6afb5b421ff4c27363568709_%D0%A7%D0%B5%CC%88%D1%80%D0%BD%D0%BE-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B8%CC%86%20%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%20%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B%20%D1%81%20%D0%B1%D0%BE%D1%80%D0%B4%D0%BE%D0%B8%CC%86.png"
+      src="Portret.png"
       alt="Дмитрий Потаралов"
     >
 
