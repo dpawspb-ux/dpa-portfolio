@@ -12,10 +12,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --black: #171717;
+  --grey: #777;
+  --light: #dedede;
+  --accent: #a42b25;
+}
+
 body {
   margin: 0;
   background: #fff;
-  color: #171717;
+  color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
@@ -25,11 +32,13 @@ a {
   text-decoration: none;
 }
 
+/* HEADER */
+
 header {
   width: 80%;
+  max-width: 1440px;
   height: 112px;
   margin: 0 auto;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,84 +60,156 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 42px;
 }
 
 nav a {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: .035em;
+  letter-spacing: .06em;
   text-transform: uppercase;
   transition: color .2s;
 }
 
 nav a:hover {
-  color: #a42b25;
+  color: var(--accent);
 }
+
+/* MAIN */
 
 main {
   width: 80%;
-  max-width: 1000px;
-  margin: 8vw auto 12vw;
+  max-width: 1200px;
+  margin: 90px auto 140px;
+}
+
+/* TITLE */
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--light);
+  margin-bottom: 65px;
 }
 
 h1 {
-  margin: 0 0 7vw;
-  font-size: clamp(36px, 5vw, 62px);
+  margin: 0;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .95;
   font-weight: 300;
-  letter-spacing: -.055em;
+  letter-spacing: -.065em;
 }
+
+.heading-note {
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  padding-bottom: 7px;
+}
+
+/* INTRO */
 
 .intro {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 5vw;
+  grid-template-columns: 240px 1fr;
+  gap: 9%;
   align-items: start;
 }
 
+.portrait-wrap {
+  width: 100%;
+}
+
 .portrait {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: contain;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
   filter: grayscale(100%);
-  opacity: .82;
 }
 
-p {
-  margin: 0 0 18px;
-  max-width: 650px;
-  font-size: 14px;
-  line-height: 1.75;
-  color: #454545;
+.intro-content {
+  padding-top: 5px;
+  max-width: 700px;
 }
 
-.columns {
+.intro-label {
+  margin: 0 0 28px;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.intro-text {
+  margin: 0 0 24px;
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.65;
+  letter-spacing: -.015em;
+  color: #333;
+}
+
+.intro-text:last-child {
+  margin-bottom: 0;
+}
+
+/* INFORMATION */
+
+.info-section {
+  margin-top: 125px;
+  border-top: 1px solid var(--light);
+  padding-top: 28px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8vw;
-  margin-top: 8vw;
+  gap: 10%;
 }
 
-h2 {
-  margin: 0 0 18px;
-  font-size: 11px;
-  font-weight: 400;
+.info-block {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 25px;
 }
 
-.columns p {
+.info-number {
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--grey);
+}
+
+.info-content h2 {
+  margin: 0 0 25px;
   font-size: 12px;
-  line-height: 1.9;
+  font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
+
+.info-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* FOOTER */
 
 footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px 0 30px;
+  border-top: 1px solid var(--light);
   display: flex;
   justify-content: space-between;
-  padding: 24px 5% 30px;
-  color: #777;
+  color: var(--grey);
   font-size: 10px;
+  letter-spacing: .04em;
 }
+
+/* TABLET */
 
 @media (max-width: 900px) {
   header {
@@ -144,9 +225,30 @@ footer {
   }
 
   nav a {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  main {
+    width: 85%;
+    margin-top: 75px;
+  }
+
+  .intro {
+    grid-template-columns: 200px 1fr;
+    gap: 7%;
+  }
+
+  .info-section {
+    gap: 6%;
+  }
+
+  .info-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
   header {
@@ -169,22 +271,68 @@ footer {
 
   main {
     width: 90%;
-    margin-top: 12vw;
+    margin-top: 55px;
+    margin-bottom: 90px;
+  }
+
+  .page-heading {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
   }
 
   h1 {
-    margin-bottom: 10vw;
+    font-size: 52px;
   }
 
-  .intro,
-  .columns {
+  .heading-note {
+    font-size: 8px;
+    max-width: 90px;
+    text-align: right;
+  }
+
+  .intro {
     grid-template-columns: 1fr;
-    gap: 8vw;
+    gap: 35px;
   }
 
-  .portrait {
-    width: 104px;
-    height: 104px;
+  .portrait-wrap {
+    width: 190px;
+  }
+
+  .intro-content {
+    padding-top: 0;
+  }
+
+  .intro-label {
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .info-section {
+    margin-top: 70px;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 25px;
+  }
+
+  .info-block {
+    grid-template-columns: 65px 1fr;
+    gap: 15px;
+  }
+
+  .info-content h2 {
+    margin-bottom: 18px;
+  }
+
+  footer {
+    width: 90%;
+    font-size: 9px;
+    gap: 15px;
   }
 }
 </style>
@@ -205,59 +353,83 @@ footer {
 </header>
 
 <main>
-  <h1>О бюро</h1>
+
+  <div class="page-heading">
+    <h1>О бюро</h1>
+    <div class="heading-note">DPA / About us</div>
+  </div>
 
   <section class="intro">
-    <img
-      class="portrait"
-      src="Portret.png"
-      alt="Дмитрий Потаралов"
-    >
 
-    <div>
-      <p>
+    <div class="portrait-wrap">
+      <img
+        class="portrait"
+        src="Portret.png"
+        alt="Дмитрий Потаралов"
+      >
+    </div>
+
+    <div class="intro-content">
+
+      <div class="intro-label">
+        Архитектурная мастерская
+      </div>
+
+      <p class="intro-text">
         DPA — архитектурная мастерская Дмитрия Потаралова,
         создающая современную, лаконичную и индивидуальную
         архитектуру, в которой важны человек, место и контекст.
       </p>
 
-      <p>
+      <p class="intro-text">
         Мы проектируем общественные и жилые здания, частную
         архитектуру и градостроительные концепции. Работаем
         с разными масштабами — от анализа участка и архитектурной
         концепции до рабочей документации и сопровождения строительства.
       </p>
 
-      <p>
+      <p class="intro-text">
         В основе нашего подхода — комфортная и устойчивая среда,
         внимательное отношение к природе и истории места,
         рациональные решения и современный BIM-процесс.
       </p>
+
     </div>
   </section>
 
-  <section class="columns">
-    <div>
-      <h2>ДМИТРИЙ ПОТАРАЛОВ</h2>
-      <p>
-        Окончил СПбГАСУ в 2007 году.
-        Член Союза архитекторов Санкт-Петербурга с 2010 года.
-      </p>
+  <section class="info-section">
+
+    <div class="info-block">
+      <div class="info-number">01 / PERSON</div>
+
+      <div class="info-content">
+        <h2>Дмитрий Потаралов</h2>
+        <p>
+          Окончил СПбГАСУ в 2007 году.
+          Член Союза архитекторов Санкт-Петербурга с 2010 года.
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h2>НАПРАВЛЕНИЯ</h2>
-      <p>
-        Общественные здания<br>
-        Жилые комплексы<br>
-        Частная архитектура<br>
-        Градостроительные концепции<br>
-        Ландшафтная архитектура<br>
-        Интерьеры<br>
-        BIM
-      </p>
+    <div class="info-block">
+      <div class="info-number">02 / EXPERTISE</div>
+
+      <div class="info-content">
+        <h2>Направления</h2>
+        <p>
+          Общественные здания<br>
+          Жилые комплексы<br>
+          Частная архитектура<br>
+          Градостроительные концепции<br>
+          Ландшафтная архитектура<br>
+          Интерьеры<br>
+          BIM
+        </p>
+      </div>
     </div>
+
   </section>
+
 </main>
 
 <footer>
