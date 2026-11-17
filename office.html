@@ -29,8 +29,6 @@ a {
   text-decoration: none;
 }
 
-/* HEADER */
-
 header {
   width: 80%;
   height: 112px;
@@ -72,23 +70,26 @@ nav a:hover,
   color: #a42b25;
 }
 
-/* MAIN */
-
 main {
   width: 80%;
   max-width: 1440px;
   margin: 65px auto 120px;
 }
 
-/* HERO */
+/* ГЛАВНОЕ ФОТО */
+
+.project-hero {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .project-hero img {
   display: block;
-  width: 100%;
+  width: 66%;
   height: auto;
 }
 
-/* DESCRIPTION */
+/* НАЗВАНИЕ И ОПИСАНИЕ */
 
 .project-intro {
   display: grid;
@@ -119,12 +120,13 @@ h1 {
   color: #333;
 }
 
-/* GALLERY */
+/* ГАЛЕРЕЯ */
 
 .gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 75px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  align-items: start;
 }
 
 .gallery img {
@@ -133,7 +135,7 @@ h1 {
   height: auto;
 }
 
-/* BACK LINK */
+/* ССЫЛКА НАЗАД */
 
 .project-bottom {
   margin-top: 100px;
@@ -187,7 +189,7 @@ footer {
   }
 
   .gallery {
-    gap: 50px;
+    gap: 25px;
   }
 }
 
@@ -218,6 +220,10 @@ footer {
     margin-bottom: 75px;
   }
 
+  .project-hero img {
+    width: 100%;
+  }
+
   .project-intro {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -234,6 +240,7 @@ footer {
   }
 
   .gallery {
+    grid-template-columns: 1fr;
     gap: 28px;
   }
 
@@ -272,16 +279,12 @@ footer {
 
 <main>
 
-  <!-- ГЛАВНОЕ ИЗОБРАЖЕНИЕ -->
-
   <section class="project-hero">
     <img
       src="office-1.jpg"
       alt="Офис девелопера — главный фасад"
     >
   </section>
-
-  <!-- НАЗВАНИЕ И ОПИСАНИЕ -->
 
   <section class="project-intro">
 
@@ -302,8 +305,6 @@ footer {
     </div>
 
   </section>
-
-  <!-- ГАЛЕРЕЯ -->
 
   <section class="gallery">
 
@@ -342,4 +343,3 @@ footer {
 
 </body>
 </html>
-
