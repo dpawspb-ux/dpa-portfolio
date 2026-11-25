@@ -80,10 +80,15 @@ main {
   margin: 65px auto 120px;
 }
 
-.project-hero img {
+/* VIDEO HERO */
+
+.project-hero video {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #f2f2f2;
 }
 
 /* DESCRIPTION */
@@ -115,21 +120,6 @@ h1 {
   font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.7;
   color: #333;
-}
-
-/* VIDEO */
-
-.project-video {
-  margin: 0 0 85px;
-}
-
-.project-video video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: #f2f2f2;
 }
 
 /* GALLERY */
@@ -199,10 +189,6 @@ footer {
     margin: 40px 0 60px;
   }
 
-  .project-video {
-    margin-bottom: 60px;
-  }
-
   .gallery {
     gap: 50px;
   }
@@ -250,10 +236,6 @@ footer {
     line-height: 1.7;
   }
 
-  .project-video {
-    margin-bottom: 40px;
-  }
-
   .gallery {
     gap: 28px;
   }
@@ -287,68 +269,4 @@ footer {
   <nav>
     <a href="index.html#projects">Проекты</a>
     <a href="about.html">О бюро</a>
-    <a href="contacts.html">Контакты</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="project-hero">
-    <img src="Nebo-3.png" alt="Дом НЕБО — фронтальный вид с бассейном">
-  </section>
-
-  <section class="project-intro">
-    <div>
-      <h1>НЕБО</h1>
-    </div>
-
-    <div class="project-description">
-      <p>
-        Индивидуальный жилой дом — один из домов посёлка SKY11,
-        расположенного в Ленинградской области.
-      </p>
-
-      <p>
-        Посёлок полностью расположен на холме, что определяет
-        характер окружающего ландшафта и становится важной
-        частью архитектурной концепции дома.
-      </p>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-
-  <section class="project-video">
-    <video
-      controls
-      playsinline
-      preload="metadata"
-      poster="Nebo-3.png"
-    >
-      <source src="nebo-video.mp4" type="video/mp4">
-      Ваш браузер не поддерживает воспроизведение видео.
-    </video>
-  </section>
-
-  <!-- GALLERY -->
-
-  <section class="gallery">
-    <img
-      src="Nebo-2.png"
-      alt="Дом НЕБО — вид со стороны подъезда"
-      loading="lazy"
-    >
-
-    <img
-      src="Nebo-4.png"
-      alt="Дом НЕБО — боковая перспектива"
-      loading="lazy"
-    >
-
-    <img
-      src="Nebo-1.png"
-      alt="Дом НЕБО — терраса, бассейн и камин"
-      loading="lazy"
-    >
-  </section>
-
+    <a
