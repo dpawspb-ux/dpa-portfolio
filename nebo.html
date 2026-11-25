@@ -82,12 +82,14 @@ main {
   height: auto;
 }
 
+/* DESCRIPTION */
+
 .project-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8%;
   align-items: start;
-  margin: 55px 0 100px;
+  margin: 55px 0 75px;
 }
 
 h1 {
@@ -109,6 +111,21 @@ h1 {
   font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.7;
   color: #333;
+}
+
+/* VIDEO */
+
+.project-video {
+  margin: 0 0 85px;
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #f2f2f2;
 }
 
 /* GALLERY */
@@ -164,7 +181,11 @@ footer {
 
   .project-intro {
     gap: 6%;
-    margin: 40px 0 75px;
+    margin: 40px 0 60px;
+  }
+
+  .project-video {
+    margin-bottom: 60px;
   }
 
   .gallery { gap: 50px; }
@@ -195,7 +216,7 @@ footer {
   .project-intro {
     grid-template-columns: 1fr;
     gap: 25px;
-    margin: 35px 0 50px;
+    margin: 35px 0 45px;
   }
 
   h1 { font-size: 58px; }
@@ -203,6 +224,10 @@ footer {
   .project-description p {
     font-size: 15px;
     line-height: 1.7;
+  }
+
+  .project-video {
+    margin-bottom: 40px;
   }
 
   .gallery { gap: 28px; }
@@ -261,6 +286,22 @@ footer {
     </div>
   </section>
 
+  <!-- VIDEO -->
+
+  <section class="project-video">
+    <video
+      controls
+      playsinline
+      preload="metadata"
+      poster="Nebo-3.png"
+    >
+      <source src="Nebo%20movie.mov" type="video/quicktime">
+      Ваш браузер не поддерживает воспроизведение видео.
+    </video>
+  </section>
+
+  <!-- GALLERY -->
+
   <section class="gallery">
     <img src="Nebo-2.png" alt="Дом НЕБО — вид со стороны подъезда" loading="lazy">
 
@@ -282,4 +323,3 @@ footer {
 
 </body>
 </html>
-
