@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,9 +8,13 @@
 <title>НЕБО — DPA</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -169,10 +173,21 @@ footer {
 /* TABLET */
 
 @media (max-width: 900px) {
-  header { width: 85%; }
-  .logo { width: 91px; }
-  nav { gap: 28px; }
-  nav a { font-size: 14px; }
+  header {
+    width: 85%;
+  }
+
+  .logo {
+    width: 91px;
+  }
+
+  nav {
+    gap: 28px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
 
   main {
     width: 85%;
@@ -188,7 +203,9 @@ footer {
     margin-bottom: 60px;
   }
 
-  .gallery { gap: 50px; }
+  .gallery {
+    gap: 50px;
+  }
 }
 
 /* MOBILE */
@@ -199,8 +216,13 @@ footer {
     height: 82px;
   }
 
-  .logo { width: 62px; }
-  nav { gap: 12px; }
+  .logo {
+    width: 62px;
+  }
+
+  nav {
+    gap: 12px;
+  }
 
   nav a {
     font-size: 9px;
@@ -219,7 +241,9 @@ footer {
     margin: 35px 0 45px;
   }
 
-  h1 { font-size: 58px; }
+  h1 {
+    font-size: 58px;
+  }
 
   .project-description p {
     font-size: 15px;
@@ -230,9 +254,13 @@ footer {
     margin-bottom: 40px;
   }
 
-  .gallery { gap: 28px; }
+  .gallery {
+    gap: 28px;
+  }
 
-  .project-bottom { margin-top: 55px; }
+  .project-bottom {
+    margin-top: 55px;
+  }
 
   footer {
     width: 90%;
@@ -242,7 +270,9 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
 </style>
 </head>
@@ -295,7 +325,7 @@ footer {
       preload="metadata"
       poster="Nebo-3.png"
     >
-      <source src="Nebo%20movie.mov" type="video/quicktime">
+      <source src="nebo-video.mp4" type="video/mp4">
       Ваш браузер не поддерживает воспроизведение видео.
     </video>
   </section>
@@ -303,23 +333,22 @@ footer {
   <!-- GALLERY -->
 
   <section class="gallery">
-    <img src="Nebo-2.png" alt="Дом НЕБО — вид со стороны подъезда" loading="lazy">
+    <img
+      src="Nebo-2.png"
+      alt="Дом НЕБО — вид со стороны подъезда"
+      loading="lazy"
+    >
 
-    <img src="Nebo-4.png" alt="Дом НЕБО — боковая перспектива" loading="lazy">
+    <img
+      src="Nebo-4.png"
+      alt="Дом НЕБО — боковая перспектива"
+      loading="lazy"
+    >
 
-    <img src="Nebo-1.png" alt="Дом НЕБО — терраса, бассейн и камин" loading="lazy">
+    <img
+      src="Nebo-1.png"
+      alt="Дом НЕБО — терраса, бассейн и камин"
+      loading="lazy"
+    >
   </section>
 
-  <div class="project-bottom">
-    <a class="back-link" href="index.html#projects">← Все проекты</a>
-  </div>
-
-</main>
-
-<footer>
-  <span>DPA — Dmitrii Potaralov Architects</span>
-  <span>© 2026</span>
-</footer>
-
-</body>
-</html>
